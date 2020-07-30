@@ -1,4 +1,8 @@
 ## It takes in a matrix and returns a list consisting of 4 functions. 
+## set: sets the cached matrix to the new one and sets the inverse to null so that it can be recalculated
+## get: gets the cached data
+## setinv: sets the cached inverse to the new calculated one in case it is null or the matrix has been changed
+## getinv: gets the cached inv
 
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
@@ -33,8 +37,8 @@ cacheSolve <- function(x, ...) {
     return(inv)
   }
   
-  data <- x$get()
-  inv <- solve(data)
+  mat <- x$get()
+  inv <- solve(mat, ...)
   x$setinv(inv)
   inv
 }
