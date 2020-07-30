@@ -1,7 +1,4 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
+## It takes in a matrix and returns a list consisting of 4 functions. 
 
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
@@ -23,7 +20,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## It takes in a list of type that is returned from the function makeCacheMatrix. gets the inverse from the cached data and 
+## checks if it is null. If it is, it calculates the inverse using the solve function and sets the inverse in the cached data
+## to the new calculated value.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
